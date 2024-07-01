@@ -25,6 +25,26 @@ PRODUCT_SYSTEM_DEVICE := OnePlus9Pro
 
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 
+# RisingOS flags
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    RISING_MAINTAINER="opensourcefreak" \
+		RISING_CHIPSET="Snapdragon 888 5G"
+
+# Addons
+TARGET_HAS_UDFPS := true
+
+# Gms
+WITH_GMS := true
+
+# Don't ship Google Camera
+TARGET_PREBUILT_GOOGLE_CAMERA := false
+
+# Ship Aperture
+PRODUCT_NO_CAMERA := false
+
+# Ship pixel launcher
+TARGET_DEFAULT_PIXEL_LAUNCHER := true
+
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="OnePlus9Pro-user 13 TP1A.220905.001 R.159cc68-4eae-182baf release-keys" \
     TARGET_DEVICE=$(PRODUCT_SYSTEM_DEVICE) \
